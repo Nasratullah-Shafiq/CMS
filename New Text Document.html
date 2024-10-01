@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script src="./Assets/js/plugins/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="./Assets/js/jquery.min.js"></script>
+    <script>
+      // tinymce.init({
+      //   selector: '#classic';
+      // });
+      tinymce.init({
+  selector: 'textarea#classic',
+  height: 600,
+  plugins: [
+    'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+    'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+    'insertdatetime', 'media', 'table', 'tableofcontents', 'wordcount'
+  ],
+  toolbar: 'tableofcontents | undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+});
+    </script>
+  
+
+  
+    <h1>TinyMCE Quick Start Guide</h1>
+    <form method="post">
+      <!-- <textarea id="mytextarea"></textarea> -->
+      <textarea id="classic">
+  <p><img style="float: right;" title="Tiny Logo" src="https://www.tiny.cloud/docs/images/logos/android-chrome-256x256.png" alt="TinyMCE Logo" width="128" height="128"></p>
+
+  <h2>The world’s first rich text editor in the cloud</h2>
+
+  <p>
+    Have you heard about Tiny Cloud?
+    It’s the first step in our journey to help you deliver great content creation experiences, no matter your level of expertise.
+    50,000 developers already agree.
+    They get free access to our global CDN, image proxy services and auto updates to the TinyMCE editor.
+    They’re also ready for some exciting updates coming soon.
+  </p>
+
+  <p>
+    One of these enhancements is <strong>Tiny Drive</strong>: imagine file management for TinyMCE, in the cloud, made super easy.
+    Learn more at <a href='https://www.tiny.cloud/drive/'>Tiny Cloud - Tiny Drive</a>, where you’ll find a working demo and an opportunity to provide feedback to the product team.
+  </p>
+
+  <h3>An editor for every project</h3>
+
+  <p>
+    Here are some of our customer’s most common use cases for TinyMCE:
+    <ul>
+      <li>Content Management Systems (<em>e.g. WordPress, Umbraco</em>)</li>
+      <li>Learning Management Systems (<em>e.g. Blackboard</em>)</li>
+      <li>Customer Relationship Management and marketing automation (<em>e.g. Marketo</em>)</li>
+      <li>Email marketing (<em>e.g. Constant Contact</em>)</li>
+      <li>Content creation in SaaS systems (<em>e.g. Eventbrite, Evernote, GoFundMe, Zendesk</em>)</li>
+    </ul>
+  </p>
+
+  <p>
+    And those use cases are just the start.
+    TinyMCE is incredibly flexible, and with hundreds of APIs there’s likely a solution for your editor project.
+    If you haven’t experienced Tiny Cloud, get started today.
+    You’ll even get a free trial of our premium plugins – no credit card required!
+  </p>
+
+</textarea>
+    </form>
+    <script type="text/javascript">
+            var table = '<p>This table uses features of the non-editable plugin to make the text in the<br /><strong>top row</strong> and <strong>left column</strong> uneditable.</p>' +
+'    <table style="width: 60%; border-collapse: collapse;" border="1"> ' +
+'        <caption class="mceNonEditable">Ephox Sales Analysis</caption> ' +
+'       <tbody> ' +
+'          <tr class="mceNonEditable"> ' +
+'                <th style="width: 40%;">&nbsp;</th><th style="width: 15%;">Q1</th> ' +
+'                <th style="width: 15%;">Q2</th><th style="width: 15%;">Q3</th> ' +
+'                <th style="width: 15%;">Q4</th> ' +
+'            </tr> ' +
+'            <tr> ' +
+'                <td class="mceNonEditable">East Region</td> ' +
+'                <td>100</td> <td>110</td> <td>115</td> <td>130</td> ' +
+'            </tr> ' +
+'            <tr> ' +
+'                <td class="mceNonEditable">Central Region</td> ' +
+'                <td>100</td> <td>110</td> <td>115</td> <td>130</td> ' +
+'            </tr> ' +
+'            <tr> ' +
+'                <td class="mceNonEditable">West Region</td> ' +
+'                <td>100</td> <td>110</td> <td>115</td> <td>130</td> ' +
+'            </tr> ' +
+'        </tbody> ' +
+'    </table>';
+
+var table2 = '<div> ' +
+'        <p>' +
+'            Templates are a great way to help content authors get started creating content.  You can define the HTML for the template and ' +
+'            then when the author inserts the template they have a great start towards creating content! ' +
+'        </p> ' +
+'        <p> ' +
+'            In this example we create a simple table for providing product details for a product page on your web site.  The headings are ' +
+'            made non-editable by loading the non-editable plugin and placing the correct class on the appropriate table cells. ' +
+'        </p> ' +
+'        <table style="width:90%; border-collapse: collapse;" border="1"> ' +
+'        <tbody> ' +
+'        <tr style="height: 30px;"> ' +
+'            <th class="mceNonEditable" style="width:40%; text-align: left;">Product Name:</td><td style="width:60%;">{insert name here}</td> ' +
+'        </tr> ' +
+'        <tr style="height: 30px;"> ' +
+'            <th class="mceNonEditable" style="width:40%; text-align: left;">Product Description:</td><td style="width:60%;">{insert description here}</td> ' +
+'        </tr> ' +
+'        <tr style="height: 30px;"> ' +
+'            <th class="mceNonEditable" style="width:40%; text-align: left;">Product Price:</td><td style="width:60%;">{insert price here}</td> ' +
+'        </tr> ' +
+'        </tbody> ' +
+'        </table> ' +
+'    </div> ';
+
+var demoBaseConfig = {
+  selector: 'textarea#classic',
+  width: 755,
+  height: 500,
+  resize: false,
+  autosave_ask_before_unload: false,
+  powerpaste_allow_local_images: true,
+  plugins: [
+    'a11ychecker advcode advlist anchor autolink codesample fullscreen help image imagetools tinydrive',
+    ' lists link media noneditable powerpaste preview',
+    ' searchreplace table template tinymcespellchecker visualblocks wordcount'
+  ],
+  templates: [
+    {
+      title: 'Non-editable Example',
+      description: 'Non-editable example.',
+      content: table
+    },
+    {
+      title: 'Simple Table Example',
+      description: 'Simple Table example.',
+      content: table2
+    }
+  ],
+  toolbar:
+    'insertfile a11ycheck undo redo | bold italic | forecolor backcolor | template codesample | alignleft aligncenter alignright alignjustify | bullist numlist | link image tinydrive',
+  spellchecker_dialog: true,
+  spellchecker_ignore_list: ['Ephox', 'Moxiecode'],
+  tinydrive_demo_files_url: '/docs/demo/tiny-drive-demo/demo_files.json',
+  tinydrive_token_provider: function (success, failure) {
+    success({ token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.Ks_BdfH4CWilyzLNk8S2gDARFhuxIauLa8PwhdEQhEo' });
+  },
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+};
+
+tinymce.init(demoBaseConfig);
+        </script>
+  </body>
+</html>
